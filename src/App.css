@@ -1,3 +1,8 @@
+:root {
+  --color1: aqua;
+  --color2: blue;
+}
+
 .App {
   text-align: center;
 }
