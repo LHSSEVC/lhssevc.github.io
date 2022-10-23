@@ -1,20 +1,17 @@
-@keyframes slideInFromLeft {
-    0% {
-      transform: translateX(-100%) rotate(45deg);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-
+.title {
+    padding: 1rem 0;
+    background-color: white;
+}
 h1 {
     animation: 1s ease-out 0s 1 slideInFromLeft;
     color: var(--color2);
     text-shadow: 2px 2px 6px gray;
+    margin: 0;
 }
 
 h2, h3 {
     text-shadow: 2px 2px 6px var(--color2);
+    animation: 1s ease 0s 1 popUp;
 }
 
 .content {
@@ -23,10 +20,12 @@ h2, h3 {
     margin: auto;
     color: white;
     text-shadow: 2px 2px var(--color2);
+    animation: 1s ease 0s 1 popUp;
 }
 
 img {
     position: fixed;
+    top: 0;
     left: 50%;
     transform: translate(-50%, 0);
     width: 100vw;
