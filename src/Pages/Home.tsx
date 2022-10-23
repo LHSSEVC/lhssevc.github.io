@@ -6,7 +6,7 @@ const Home = () => {
     <div>
       <img src='../../1.jpg' alt='img1.jpg'></img>
       <div className='title'>
-        <h1>Laurel Heights Secondary School EVC Club</h1>
+        <h1>LHSS Electric Vehicle Club</h1>
       </div>
       <br/>
       <div className='content'>
