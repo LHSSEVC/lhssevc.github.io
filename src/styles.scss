@@ -1,3 +1,4 @@
+@use "./utilities/utils" as *;
 @import url("https://fonts.googleapis.com/css2?family=Poppins,Inter&display=swap");
 
 body {
@@ -12,7 +13,20 @@ code {
     monospace;
 }
 
-p {
+.desktop {
+  @include respond-to(mobile) {
+    display: none !important;
+  }
+}
+
+.mobile {
+  @include respond-to(desktop) {
+    display: none !important;
+  }
+}
+
+.hidden {
+  display: none !important;
 }
 
 @keyframes slideInFromLeft {
@@ -32,11 +46,6 @@ p {
     transform: translateY(0);
     opacity: 100%;
   }
-}
-
-:root {
-  --color1: #ddd;
-  --color2: #2f5597;
 }
 
 .App {

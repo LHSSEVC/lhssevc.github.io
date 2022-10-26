@@ -1,16 +1,20 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { AiOutlineMenu } from "react-icons/ai"
 import './Navbar.scss'
 
-let pages = ['Home', 'About', 'Contact', 'Team', 'Gallery', 'Sponsors']
+let pages = [{name: 'Home', path: "/"}, 'About', 'Contact', 'Team', 'Gallery', 'Sponsors']
 
 const Navbar = () => {
+  const [hamburgerState, changeHamburgerState] = useState(false)
+
   return (
     <div className='navbar'>
+      <div className="desktop links">
         {
           pages.map((value, index) => {
-            if (value == 'Home') {
+            if (typeof value === "object") {
               return (
-                <a href={`/`}>{value}</a>
+                <a href={`/`}>{value.name}</a>
               )
             }
             return (
@@ -18,6 +22,17 @@ const Navbar = () => {
             )
           })
         }
+      </div>
+
+      <div className = "mobile hamburgerButton">
+        <button onClick={() => {changeHamburgerState(!hamburgerState)}}>
+          <AiOutlineMenu/>
+        </button>
+      </div>
+
+      <div className = {"mobile links " + (hamburgerState ? "hidden" : "")}>
+
+      </div>
     </div>
   )
 }
