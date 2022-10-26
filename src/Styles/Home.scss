@@ -1,33 +1,32 @@
 .title {
-    padding: 1rem 0;
-    background-color: white;
+  padding: 1rem 0;
+  background-color: white;
 }
 h1 {
-    animation: 1s ease-out 0s 1 slideInFromLeft;
-    color: var(--color2);
-    text-shadow: 2px 2px 6px gray;
-    margin: 0;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+  color: var(--color2);
+  text-shadow: 2px 2px 6px gray;
+  margin: 0;
 }
 
-h2, h3 {
-    text-shadow: 2px 2px 6px var(--color2);
-    animation: 1s ease 0s 1 popUp;
+h2,
+h3 {
+  animation: 1s ease 0s 1 popUp;
 }
 
 .content {
-    text-align: center;
-    max-width: 50rem;
-    margin: auto;
-    color: white;
-    text-shadow: 2px 2px var(--color2);
-    animation: 1s ease 0s 1 popUp;
+  text-align: center;
+  max-width: 50rem;
+  margin: auto;
+  color: white;
+  animation: 1s ease 0s 1 popUp;
 }
 
 img {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 100vw;
-    z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100vw;
+  z-index: -1;
 }

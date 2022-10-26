@@ -1,7 +1,7 @@
 import React from 'react'
 import './Navbar.scss'
 
-let pages = ['Home', 'About', 'Contact', 'Team', 'Gallery', 'Sponsor Information']
+let pages = ['Home', 'About', 'Contact', 'Team', 'Gallery', 'Sponsors']
 
 const Navbar = () => {
   return (
@@ -14,7 +14,7 @@ const Navbar = () => {
               )
             }
             return (
-              <a href={`/${value}`}>{value}</a>
+              <a href={`/${value.toLowerCase().replace(" ", "")}`}>{value}</a>
             )
           })
         }
