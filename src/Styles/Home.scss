@@ -1,5 +1,12 @@
 @use "../utilities/_utils.scss" as *;
 
+// div {
+//   position: relative;
+//   width: 100vw;
+//   left: 0;
+//   top: 0;
+// }
+
 .title {
   padding: 1rem 0;
   background-color: white;
@@ -28,9 +35,9 @@ h3 {
 img {
   position: fixed;
   top: 0;
-  left: 50%;
+  left: 50vw;
   transform: translate(-50%, 0);
   width: 100vw;
   z-index: -1;
-  filter: brightness(50%)
+  filter: brightness(50%);
 }

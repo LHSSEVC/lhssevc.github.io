@@ -7,10 +7,62 @@
   align-items: center;
 
   background-color: $background;
+
+  &.mobile {
+    z-index: 1;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    padding-right: 5%;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(
+      90deg,
+      rgba($background, 0),
+      rgba($background, 0.7),
+      rgba($background, 1)
+    );
+    opacity: 100%;
+    right: 0;
+    left: auto;
+    width: 100%;
+    transition: all 0.15s linear;
+
+    &.off {
+      right: -100%;
+      background: rgba($background, 0);
+      opacity: 0;
+      width: 0;
+    }
+
+    a {
+      background: none;
+    }
+  }
 }
 
 .navbar {
   background-color: $background;
+}
+
+.hamburgerButton {
+  overflow: auto;
+  button {
+    position: relative;
+    z-index: 5;
+    font-size: 1.4rem;
+    border-radius: 15%;
+    margin: 1%;
+    padding: 1%;
+    float: right;
+    display: block;
+
+    svg {
+      color: $background;
+      display: block;
+    }
+  }
 }
 
 a {

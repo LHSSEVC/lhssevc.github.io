@@ -30,8 +30,19 @@ const Navbar = () => {
         </button>
       </div>
 
-      <div className = {"mobile links " + (hamburgerState ? "hidden" : "")}>
-
+      <div className = {"mobile links " + (hamburgerState ? "off" : "on")}>
+      {
+          pages.map((value, index) => {
+            if (typeof value === "object") {
+              return (
+                <a href={`/`}>{value.name}</a>
+              )
+            }
+            return (
+              <a href={`/${value.toLowerCase().replace(" ", "")}`}>{value}</a>
+            )
+          })
+        }
       </div>
     </div>
   )
