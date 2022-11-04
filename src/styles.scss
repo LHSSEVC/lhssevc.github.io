@@ -1,6 +1,14 @@
 @use "./utilities/utils" as *;
 @import url("https://fonts.googleapis.com/css2?family=Poppins,Inter&display=swap");
 
+$debug: false;
+
+@if $debug {
+  * {
+    outline: red solid 1px;
+  }
+}
+
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
@@ -48,8 +56,10 @@ code {
   }
 }
 
-.App {
+.App,
+#root {
   text-align: center;
+  width: 100%;
 }
 
 .App-logo {

@@ -40,4 +40,8 @@ img {
   width: 100vw;
   z-index: -1;
   filter: brightness(50%);
+
+  @include respond-to(mobile) {
+    top: 11vh;
+  }
 }

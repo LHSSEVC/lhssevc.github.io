@@ -1,5 +1,11 @@
 @use "../../utilities/_utils.scss" as *;
 
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
 .links {
   display: flex;
   flex-direction: row;
@@ -26,13 +32,13 @@
     opacity: 100%;
     right: 0;
     left: auto;
-    width: 100%;
-    transition: all 0.15s linear;
+    transition: right 0.1s linear, background 0.1s linear, opacity 0.1s linear;
+    display: flex;
 
     &.off {
       right: -100%;
-      background: rgba($background, 0);
       opacity: 0;
+      z-index: 1;
     }
 
     a {
@@ -43,6 +49,12 @@
 
 .navbar {
   background-color: $background;
+  position: relative;
+  overflow-x: clip;
+  overflow-y: visible;
+  height: max-content;
+  width: 100%;
+  top: 0;
 }
 
 .hamburgerButton {
