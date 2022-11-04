@@ -45,7 +45,6 @@
     ]
   },
   "devDependencies": {
-    "generate-react-cli": "^7.4.0",
-    "husky": "^8.0.1"
+    "generate-react-cli": "^7.4.0"
   }
 }
