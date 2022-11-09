@@ -12,8 +12,6 @@
   justify-content: center;
   align-items: center;
 
-  background-color: $background;
-
   &.mobile {
     z-index: 1;
     flex-flow: column nowrap;
@@ -48,13 +46,28 @@
 }
 
 .navbar {
-  background-color: $background;
-  position: relative;
+  position: sticky;
   overflow-x: clip;
   overflow-y: visible;
-  height: max-content;
+  height: auto;
   width: 100%;
   top: 0;
+  z-index: 10;
+  background-color: #fff;
+
+  img {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    height: 100%;
+
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 80%;
+    }
+  }
 }
 
 .hamburgerButton {
@@ -77,17 +90,37 @@
 }
 
 a {
-  color: $accent;
-  background-color: darken($background, 0.1);
+  color: $blue-4;
   text-decoration: none;
-  transition: background-color color 1s ease;
-  padding: 10px 1.5vw 10px 1.5vw;
+  transition: background-color 0.3s ease, color 0.5s ease;
+  
+  display: inline-block;
+  position: relative;
 
-  font-size: large;
+  font-size: max(1.25vw, 1rem);
+  padding: 20px 1.1vw 20px 1.1vw;
 
   &:hover {
-    color: $background;
-    background-color: $accent;
-    transition: all 1s ease;
+    background-color: darken(#fff, 10%);
+    color: darken($blue-4, 10%);
+
+    &:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+  
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;  
   }
 }

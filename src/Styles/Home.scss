@@ -1,47 +1,26 @@
 @use "../utilities/_utils.scss" as *;
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-// div {
-//   position: relative;
-//   width: 100vw;
-//   left: 0;
-//   top: 0;
-// }
-
-.title {
-  padding: 1rem 0;
-  background-color: white;
-  width: 100vw;
-}
-h1 {
-  animation: 1s ease-out 0s 1 slideInFromLeft;
-  color: $accent;
-  text-shadow: 2px 2px 6px gray;
-  margin: 0;
+body {
+  font-family: 'Inter', sans-serif;
 }
 
-h2,
-h3 {
-  animation: 1s ease 0s 1 popUp;
-}
-
-.content {
-  text-align: center;
-  max-width: 50rem;
-  margin: auto;
-  color: white;
-  animation: 1s ease 0s 1 popUp;
-}
-
-img {
-  position: fixed;
-  top: 0;
-  left: 50vw;
-  transform: translate(-50%, 0);
-  width: 100vw;
-  z-index: -1;
-  filter: brightness(50%);
-
-  @include respond-to(mobile) {
-    top: 11vh;
+.Home {
+  .background {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: max(100vw, 512px);
+  }
+  h2 {
+    color: $background;
+    font-size: 7vw;
+    font-weight: 900;
+    background: url("../../public/1.jpg");
+    -webkit-background-clip: text;
+    background-size: 100%;
+    background-position: center;
+    -webkit-text-fill-color: transparent;
   }
 }

@@ -1,5 +1,8 @@
-$background: #ddd;
-$accent: #2f5597;
+$background: #fff;
+$blue-1: #94c3e0;
+$blue-2: #6999cf;
+$blue-3: #4978ab;
+$blue-4: #114a8a;
 
 @mixin respond-to($media) {
   @if $media == desktop {
