@@ -1,26 +1,49 @@
 @use "../utilities/_utils.scss" as *;
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .Home {
+  margin-top: -6%;
   .background {
     position: absolute;
     left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    width: max(100vw, 512px);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100%;
+    min-width: 100%;
   }
   h2 {
     color: $background;
     font-size: 7vw;
     font-weight: 900;
-    background: url("../../public/1.jpg");
-    -webkit-background-clip: text;
-    background-size: 100%;
-    background-position: center;
-    -webkit-text-fill-color: transparent;
+    // background: url("../../public/1.jpg");
+    // filter: grayscale(100%);
+    // -webkit-background-clip: text;
+    // background-size: 100%;
+    // background-position: center;
+    // -webkit-text-fill-color: transparent;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+  }
+
+  .landing {
+    height: 100vh;
+    position: relative;
+    top: 0;
+    overflow: hidden;
+  }
+
+  .accent-block {
+    background-color: $blue-3;
+    padding: 3%;
+    top: 100vh;
+    h3 {
+      font-size: 3rem;
+      color: $background;
+    }
   }
 }

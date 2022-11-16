@@ -1,5 +1,5 @@
 @use "./utilities/utils" as *;
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap");
 
 $debug: false;
 
@@ -11,7 +11,7 @@ $debug: false;
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #eee;
@@ -59,10 +59,10 @@ code {
 
 .App,
 #root {
-  position: relative;
+  // position: relative;
   text-align: center;
   width: 100%;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 .App-logo {
