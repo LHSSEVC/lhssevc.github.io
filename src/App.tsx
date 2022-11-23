@@ -8,7 +8,6 @@ import Contact from "./Pages/Contact";
 import Team from "./Pages/Team";
 import Gallery from "./Pages/Gallery";
 import SponsorInfo from "./Pages/SponsorInfo";
-
 function App() {
   return (
     <div className="App">
