@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import "./Navbar.scss";
+import { Link } from 'react-router-dom'
 
 let pages = [
   { name: "Home", path: "/" },
@@ -25,10 +26,10 @@ const Navbar = () => {
           }/>
           {pages.map((value, index) => {
             if (typeof value === "object") {
-              return <a href={`/`} key={value.name}>{value.name}</a>;
+              return <Link to={`/`} key={value.name}>{value.name}</Link>
             }
             return (
-              <a href={`/${value.toLowerCase().replace(" ", "")}`}>{value}</a>
+              <Link to={`/${value.toLowerCase().replace(" ", "")}`}>{value}</Link>
             );
           })}
         </div>
