@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import "./Navbar.scss";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 let pages = [
   { name: "Home", path: "/" },
@@ -19,22 +19,30 @@ const Navbar = () => {
     <div className="navbar">
       <div className="topbar">
         <div className="desktop links">
-          <img src="../../logo192.png" alt="Laurel Heights Secondary School Electric Vehicle Club Logo" onClick = {
-            () => {
-              window.location.href = '/'
-            }
-          }/>
+          <img
+            src="../../logo192.png"
+            alt="Laurel Heights Secondary School Electric Vehicle Club Logo"
+            onClick={() => {
+              window.location.href = "/";
+            }}
+          />
           {pages.map((value, index) => {
             if (typeof value === "object") {
-              return <Link to={`/`}>{value.name}</Link>
+              return <Link to={`/`}>{value.name}</Link>;
             }
             return (
-              <Link to={`/${value.toLowerCase().replace(" ", "")}`}>{value}</Link>
+              <Link to={`/${value.toLowerCase().replace(" ", "")}`}>
+                {value}
+              </Link>
             );
           })}
         </div>
-        
-        <img className="mobile" src="../../logo192.png" alt="Laurel Heights Secondary School Electric Vehicle Club Logo" />
+
+        <img
+          className="mobile"
+          src="../../logo192.png"
+          alt="Laurel Heights Secondary School Electric Vehicle Club Logo"
+        />
 
         <div className="mobile hamburgerButton">
           <button
@@ -50,10 +58,10 @@ const Navbar = () => {
       <div className={"mobile links " + (hamburgerState ? "on" : "off")}>
         {pages.map((value, index) => {
           if (typeof value === "object") {
-            return <a href={`/`}>{value.name}</a>;
+            return <Link to={`/`}>{value.name}</Link>;
           }
           return (
-            <a href={`/${value.toLowerCase().replace(" ", "")}`}>{value}</a>
+            <Link to={`/${value.toLowerCase().replace(" ", "")}`}>{value}</Link>
           );
         })}
       </div>
