@@ -26,7 +26,7 @@ const Navbar = () => {
           }/>
           {pages.map((value, index) => {
             if (typeof value === "object") {
-              return <Link to={`/`} key={value.name}>{value.name}</Link>
+              return <Link to={`/`}>{value.name}</Link>
             }
             return (
               <Link to={`/${value.toLowerCase().replace(" ", "")}`}>{value}</Link>
