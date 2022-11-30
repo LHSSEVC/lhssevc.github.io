@@ -15,8 +15,14 @@ export const themeOptions: ThemeOptions = {
     },
   },
   typography: {
-    h1: {
-      fontFamily: 'Inter',
-    },
+    fontFamily: "Inter",
+    h2: {
+      color: "#fff",
+      fontSize: "7vw",
+      fontWeight: 900,
+      top: "50%",
+      position: "relative",
+      transform: "translateY(-50%)",
+    }
   },
 };

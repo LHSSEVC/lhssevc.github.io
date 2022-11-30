@@ -1,0 +1,71 @@
+@use "../utilities/utils" as *;
+
+.About {
+  .banner {
+    background-image: url("../assets/IMG_7988.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 10%;
+    h2 {
+      display: inline;
+    }
+  }
+
+  button {
+    background-color: $background;
+    cursor: pointer;
+    color: $blue-4;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.5s ease;
+
+    display: inline-block;
+    position: relative;
+
+    font-size: max(1.25vw, 1rem);
+    padding: 20px 1.1vw 20px 1.1vw;
+
+    &:hover {
+      background-color: darken(#fff, 10%);
+      color: darken($blue-4, 10%);
+
+      &:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #0087ca;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+  }
+  .bar {
+    width: 100vw;
+    background: $background;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    button {
+      flex-grow: 1;
+    }
+  }
+
+  .goal-text {
+    padding: 5%;
+    p {
+      width: min(clamp(50em, 50%, 70em), 100%);
+      position: relative;
+      text-align: center;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
