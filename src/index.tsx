@@ -3,9 +3,14 @@ import ReactDOM from "react-dom/client";
 import "./styles.scss";
 import App from "./App";
 import { themeOptions } from "./theme";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import {
+  ThemeProvider,
+  createTheme,
+  responsiveFontSizes,
+} from "@mui/material/styles";
 
-const theme = createTheme(themeOptions);
+let theme = createTheme(themeOptions);
+theme = responsiveFontSizes(theme);
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

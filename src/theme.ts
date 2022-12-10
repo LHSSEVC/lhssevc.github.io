@@ -14,15 +14,18 @@ export const themeOptions: ThemeOptions = {
       default: '#eeeeee',
     },
   },
-  typography: {
+  typography: (palette) => { return {
     fontFamily: "Inter",
-    h2: {
-      color: "#fff",
-      fontSize: "7vw",
+    h1: {
+      color: palette.background.default,
       fontWeight: 900,
       top: "50%",
       position: "relative",
       transform: "translateY(-50%)",
+    },
+    h2: {
+      color: palette.background.default
     }
-  },
+  }
+}
 };

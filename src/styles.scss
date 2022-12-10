@@ -104,3 +104,14 @@ button {
   background-color: $blue-4;
   border: none;
 }
+
+.accent-block {
+  background-color: $blue-3;
+  padding: 25vh 10%;
+  top: 100vh;
+  text-align: center;
+  h3 {
+    font-size: 3rem;
+    color: $background;
+  }
+}
