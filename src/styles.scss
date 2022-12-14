@@ -105,13 +105,16 @@ button {
   border: none;
 }
 
-.accent-block {
+.accent {
+  color: $background;
   background-color: $blue-3;
+}
+
+.block {
   padding: 25vh 10%;
   top: 100vh;
   text-align: center;
   h3 {
     font-size: 3rem;
-    color: $background;
   }
 }
