@@ -1,11 +1,20 @@
 @use "./utilities/utils" as *;
-@import url("https://fonts.googleapis.com/css2?family=Poppins,Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap");
+
+$debug: false;
+
+@if $debug {
+  * {
+    outline: red solid 1px;
+  }
+}
 
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #eee;
 }
 
 code {
@@ -48,8 +57,12 @@ code {
   }
 }
 
-.App {
+.App,
+#root {
+  // position: relative;
   text-align: center;
+  width: 100%;
+  // overflow-x: hidden;
 }
 
 .App-logo {
@@ -84,5 +97,24 @@ code {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+button {
+  background-color: $blue-4;
+  border: none;
+}
+
+.accent {
+  color: $background;
+  background-color: $blue-3;
+}
+
+.block {
+  padding: 25vh 10%;
+  top: 100vh;
+  text-align: center;
+  h3 {
+    font-size: 3rem;
   }
 }
