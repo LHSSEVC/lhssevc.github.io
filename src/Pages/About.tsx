@@ -33,9 +33,10 @@ const goals: Goals = {
 };
 
 const About = () => {
-  const [goal, setGoal] = React.useState("");
+  const [goal, setGoal] = React.useState("Design");
   return (
     <div className="About">
+      <Typography variant="h2" sx={{color: "#000000"}}>What we do</Typography>
       <Box className="bar">
         {Object.keys(goals).map((g) => (
           <button

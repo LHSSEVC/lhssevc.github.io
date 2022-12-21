@@ -31,7 +31,7 @@ const Home = () => {
       </Box>
 
       <Box className="block" sx={{ display: "flex" }}>
-        <Box>
+        <Box sx={{flexShrink: 1}}>
           <Graphic0 height="100%" width="100%" viewBox="0 0 1500 1200" />
         </Box>
         <Box>

@@ -1,6 +1,11 @@
 @use "../utilities/utils" as *;
 
 .About {
+  
+  h2 {
+    color: black;
+  }
+  
   .banner {
     background-image: url("../assets/IMG_7988.jpg");
     background-position: center;
