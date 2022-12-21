@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography, Box } from "@mui/material";
 import { ReactComponent as Graphic0 } from "../assets/graphic0.svg";
+import About from "./About";
 import "../Styles/Home.scss";
 
 const Home = () => {
@@ -26,12 +27,16 @@ const Home = () => {
           glory and valour to our school?
           <br />
           Join us at lunch on Wednesdays, in room 1106
-          {/*TODO add room number (I forget it)*/}
         </Typography>
       </Box>
 
-      <Box>
-        <Graphic0 height="50%" width="50%" viewBox="0 0 2100 2100" />
+      <Box className="block" sx={{ display: "flex" }}>
+        <Box>
+          <Graphic0 height="100%" width="100%" viewBox="0 0 1500 1200" />
+        </Box>
+        <Box>
+          <About />
+        </Box>
       </Box>
     </div>
   );

@@ -36,9 +36,6 @@ const About = () => {
   const [goal, setGoal] = React.useState("");
   return (
     <div className="About">
-      <Box className="banner">
-        <Typography variant="h2">Building the Future</Typography>
-      </Box>
       <Box className="bar">
         {Object.keys(goals).map((g) => (
           <button
